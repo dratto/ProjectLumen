@@ -1,0 +1,22 @@
+{
+  "name": "ProjectLumen",
+  "version": "0.1.1",
+  "homepage": "https://github.com/dratto/ProjectLumen",
+  "authors": [
+    "dratto <contato@diogoratto.com.br>"
+  ],
+  "description": "Projeto Agenda Telefonica",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}

@@ -11,4 +11,8 @@
 |
 */
 
-$app->get('/', ['as' => 'agenda', 'uses' => 'AgendaController@index']);
+$app->get('/', ['as' => 'agenda.index', 'uses' => 'AgendaController@index']);
+
+$app->get('/{letra}', ['as' => 'agenda.letra', 'uses' => 'AgendaController@index']);
+
+$app->post('/', ['as' => 'agenda.nome', 'uses' => 'AgendaController@getByName']);
