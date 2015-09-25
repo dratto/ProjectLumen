@@ -27,9 +27,9 @@
                 <span class="pull-right search">
                     <form class="form-line" action="{{ route('agenda.nome') }}" method="post">
                         <div class="input-group">
-                            <input type="text" class="form-control" id="search" name="search" placeholder="Pesquisar...">
+                            <input type="text" class="form-control" id="search" name="search" value="<?=$nome?>" placeholder="Pesquisar...">
                             <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
                             </span>
                         </div>
                     </form>

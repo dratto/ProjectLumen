@@ -10,7 +10,7 @@
     @endif
         <span class="pull-right">
             <a href="#" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Editar"><i class="fa fa-edit"></i></a>
-            <a href="#" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Apagar"><i class="fa fa-minus-circle"></i></a>
+            <a href="{{ route('agenda.deleta.pessoa', ['id' => $pessoa->id]) }}" class="btn btn-danger btn-xs" data-toggle="tooltip" data-placement="top" title="Apagar"><i class="fa fa-minus-circle"></i></a>
         </span>
     </div>
     <div class="panel-body">
@@ -20,7 +20,7 @@
                 <tr>
                     <td>{{ $telefone->descrição }}</td>
                     <td>{{ $telefone->numero }}</td>
-                    <td><a href="#" class="fa fa-minus-circle text-danger" data-toggle="tooltip" data-placement="top" title="Apagar"></a></td>
+                    <td><a href="{{ route('agenda.deleta.telefone', ['id' => $telefone->id]) }}" class="fa fa-minus-circle text-danger" data-toggle="tooltip" data-placement="top" title="Apagar"></a></td>
                 </tr>
             @endforeach
         </table>

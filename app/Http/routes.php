@@ -16,3 +16,7 @@ $app->get('/', ['as' => 'agenda.index', 'uses' => 'AgendaController@index']);
 $app->get('/{letra}', ['as' => 'agenda.letra', 'uses' => 'AgendaController@index']);
 
 $app->post('/', ['as' => 'agenda.nome', 'uses' => 'AgendaController@getByName']);
+
+$app->get('deleta/telefone/{id}', ['as' => 'agenda.deleta.telefone', 'uses' => 'AgendaController@deleteTelefone']);
+
+$app->get('deleta/pessoa/{id}', ['as' => 'agenda.deleta.pessoa', 'uses' => 'AgendaController@deletePessoa']);
