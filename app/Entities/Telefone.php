@@ -11,6 +11,7 @@ namespace ProjectLumen\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Telefone extends Model
 {
     protected $table = 'telefones';
@@ -20,8 +21,14 @@ class Telefone extends Model
         'codpaís',
         'ddd',
         'prefixo',
-        'sufixo'
+        'sufixo',
+        'pessoa_id'
     ];
+
+    public function pessoa()
+    {
+        return $this->belongsTo(Pessoa::class);
+    }
 
     public function getNumeroAttribute()
     {

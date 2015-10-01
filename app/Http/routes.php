@@ -17,6 +17,28 @@ $app->get('/{letra}', ['as' => 'agenda.letra', 'uses' => 'AgendaController@index
 
 $app->post('/', ['as' => 'agenda.nome', 'uses' => 'AgendaController@getByName']);
 
-$app->get('deleta/telefone/{id}', ['as' => 'agenda.deleta.telefone', 'uses' => 'AgendaController@deleteTelefone']);
 
-$app->get('deleta/pessoa/{id}', ['as' => 'agenda.deleta.pessoa', 'uses' => 'AgendaController@deletePessoa']);
+/***
+ * Pessoa
+ */
+$app->get('/contato/novo', ['as' => 'pessoa.create', 'uses' => 'PessoaController@create']);
+$app->post('/contato', ['as' => 'pessoa.store', 'uses' => 'PessoaController@store']);
+
+$app->get('/contato/editar/{id}', ['as' => 'pessoa.edit', 'uses' => 'PessoaController@edit']);
+$app->put('/contato/alterar/{id}', ['as' => 'pessoa.update', 'uses' => 'PessoaController@update']);
+
+$app->get('/deleta/pessoa/{id}', ['as' => 'pessoa.delete', 'uses' => 'PessoaController@delete']);
+$app->delete('/deleta/pessoa/{id}', ['as' => 'pessoa.destroy', 'uses' => 'PessoaController@destroy']);
+
+
+/**
+ * Telefone
+ */
+$app->get('/telefone/novo/{id}', ['as' => 'telefone.create', 'uses' => 'TelefoneController@create']);
+$app->post('/telefone', ['as' => 'telefone.store', 'uses' => 'TelefoneController@store']);
+
+$app->get('/telefone/editar/{id}', ['as' => 'telefone.edit', 'uses' => 'TelefoneController@edit']);
+$app->put('/telefone/{id}', ['as' => 'telefone.update', 'uses' => 'TelefoneController@update']);
+
+$app->get('/deleta/telefone/{id}', ['as' => 'telefone.delete', 'uses' => 'TelefoneController@delete']);
+$app->delete('/deleta/telefone/{id}', ['as' => 'telefone.destroy', 'uses' => 'TelefoneController@destroy']);
