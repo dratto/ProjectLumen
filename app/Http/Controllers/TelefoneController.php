@@ -55,8 +55,8 @@ class TelefoneController extends BaseController
             return redirect()->route('telefone.create', ['id' => $request->input('pessoa_id')])->withErrors($validator)->withInput();
         }
         $telefone = Telefone::create($request->all());
-        $pessoa = Pessoa::find($request->input('pessoa_id'));
-        $letra  = strtoupper(substr($pessoa->apelido, 0, 1));
+        $pessoa   = Pessoa::find($request->input('pessoa_id'));
+        $letra    = strtoupper(substr($pessoa->apelido, 0, 1));
         return redirect()->route('agenda.letra', ['letra' => $letra]);
     }
     public function delete($id)

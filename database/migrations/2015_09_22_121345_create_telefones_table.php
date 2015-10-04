@@ -17,8 +17,8 @@ class CreateTelefonesTable extends Migration
             $table->string('descrição', 50);
             $table->string('codpaís', 8);
             $table->integer('ddd');
-            $table->integer('prefixo');
-            $table->integer('sufixo');
+            $table->string('prefixo');
+            $table->string('sufixo');
             $table->timestamps();
 
             $table->integer('pessoa_id', false, true);
